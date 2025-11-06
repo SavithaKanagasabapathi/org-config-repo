@@ -1,1 +1,7 @@
+kafka:
+  bootstrap:
+    servers: localhost:9092 
 
+order:
+  topic:
+    name: order-placed-event
