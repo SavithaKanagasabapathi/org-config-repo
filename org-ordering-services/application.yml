@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: org-ordering-services
+  kafka:
+    bootstrap:
+      servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+server:
+  port: 8802
+
+management:
+    endpoints:
+      web:
+        exposure:
+          include: refresh
+
+topic:
+  order:
+    name: order-placed-event
