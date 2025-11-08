@@ -1,6 +1,12 @@
 kafka:
   bootstrap:
-    servers: localhost:9092 
+    servers: localhost:9092
+
+management:
+    endpoints:
+      web:
+        exposure:
+          include: refresh
 
 topic:
   order:
